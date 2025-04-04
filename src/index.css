@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+
+body {
+    margin: 0;
+    background-color:#e8e1d7 ;
+}
+
+    .vertical-timeline--two-columns .vertical-timeline-element-content {
+        padding: 0em !important;
+    }
+
+.home{
+    background: url("../src/assets/img/innerBackground.jpg") no-repeat center center fixed;
+}
+
+  

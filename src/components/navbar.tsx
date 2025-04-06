@@ -4,7 +4,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="w-full h-max bg-gradient-to-r from-white to-orange-100">
+        <div className="w-full h-max bg-gradient-to-r from-white to-orange-100 shadow-white">
 
             <div className="flex items-center justify-between px-20 py-2">
 

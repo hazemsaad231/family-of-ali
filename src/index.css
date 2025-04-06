@@ -1,17 +1,42 @@
 @import "tailwindcss";
 
 
-body {
-    margin: 0;
-    background-color:#e8e1d7 ;
-}
 
     .vertical-timeline--two-columns .vertical-timeline-element-content {
         padding: 0em !important;
     }
-
-.home{
+    .vertical-timeline-element {
+        margin: 2em 0;
+        padding: 0 !important;
+    }
+    .vertical-timeline-element-content {
+        margin-left: 0px !important;
+   
+    }
+  
+body {
     background: url("../src/assets/img/innerBackground.jpg") no-repeat center center fixed;
+
 }
 
+
+@layer utilities {
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 8px;
+    }
+  
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: gray;
+      border-radius: 10px;
+    }
+  
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background-color: indigo;
+      border-radius: 10px;
+    }
+  
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background-color: indigo;
+    }
+  }
   

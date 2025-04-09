@@ -11,9 +11,6 @@
  import img11 from "../assets/img/img11.jpeg"
 
 
-
-
-
  const Data = [
     {
       'id': 1,

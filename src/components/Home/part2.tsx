@@ -8,18 +8,21 @@ const Two = () => {
 
     return (
         <>
-  <div className="home flex items-center justify-center">
-
+  <div className="home flex items-center justify-center" id='home'>
 <VerticalTimeline lineColor="transparent" >
+<h1 className='title'>اهم الشخصيات</h1>
+
     {Data.map((data, index) => (
+
       <VerticalTimelineElement
         contentStyle={{ background: "white" }}
         key={index}
         iconStyle={{ background: "red" , display: "none" }}
         position={index % 2 === 0 ? "right" : "left"}  
       >
+
         <div className="flex w-full items-center justify-center gap-2 flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row">
-        <img src={data.img} alt=""  className='w-[100%] sm:w-[100%] md:w-60 lg:w-60 xl:w-60 h-80'/>
+        <img src={data.img} alt=""  className='w-[100%] sm:w-[100%] md:w-60 lg:w-60 xl:w-60 h-68'/>
 
           <div className='text-right p-4 w-[100%]'>
             <div className='mb-4'>

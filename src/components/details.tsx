@@ -19,7 +19,7 @@ const Details = () => {
  <img src={person.img} alt={person.name} className="w-[100%] sm:w-[100%] md:w-80 lg:w-80 xl:w-80 h-80 rounded-md" />
 
 <div className="text-right text-indigo-950 text-sm">
-      <div className="w-[100%] sm:w-[100%] md:w-[100%] lg:w-96 xl:w-96 h-80 overflow-y-auto custom-scrollbar p-4 pb-8">
+      <div className="w-[100%] sm:w-[100%] md:w-[100%] lg:w-96 xl:w-96 h-80 overflow-y-auto custom-scrollbar p-8 pb-8">
         <p>{person.details}</p>
         <h3 className="font-semibold mt-1">اهم الانجازات</h3>
         <ul className="list-none">

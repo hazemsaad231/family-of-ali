@@ -5,7 +5,7 @@ import Navbar from "./navbar"
 const Master = () => {
     return (
         <div>
-            <Navbar/>
+            {/* <Navbar/> */}
             <Outlet/>
         </div>
     )

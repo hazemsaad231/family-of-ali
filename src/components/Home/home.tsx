@@ -1,5 +1,6 @@
 import One from "./part1"
 import Two from "./part2"
+import Three from "./part3"
 
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
       <div>
         <One/>
         <Two/>
+        <Three/>
       </div>
        
     )

@@ -15,7 +15,7 @@ const Details = () => {
 
         <div> 
     <h2 className="text-2xl font-bold text-center text-indigo-950 py-6">{person.name}</h2>
- <div className="bg-white m-auto w-full sm:w-full md:w-3/4 lg:w-3/4 xl:w-1/2 flex items-center flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row">
+ <div className="bg-white m-auto w-full sm:w-full md:w-3/4 lg:w-3/4 xl:w-1/2 flex items-center flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row gap-12">
  <img src={person.img} alt={person.name} className="w-[100%] sm:w-[100%] md:w-80 lg:w-80 xl:w-80 h-[20rem] sm:h-[25rem] md:h-[30rem] lg:h-[30rem] xl:h-[30rem] rounded-md" />
 
 <div className="text-right text-indigo-950 text-sm">

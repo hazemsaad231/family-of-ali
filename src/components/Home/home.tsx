@@ -2,10 +2,12 @@ import Achievements from '../Achievements';
 import Personalities from '../Personalities';
 import One from "./part1";
 import Two from "./part2";
+import img from "../../assets/img/castle.png";
+
 
 const Home = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen py-24">
       {/* Hero Section */}
       <section id="home" className="hero">
         <div className="hero-content">
@@ -15,7 +17,7 @@ const Home = () => {
             نهضة الدولة اقتصادياً واجتماعياً، حيث أعادت هيكلة التعليم، وأطلقت مشاريع
             صناعية ضخمة، واهتمت بتطوير الجيش ليكون قوة فاعلة على الساحة الدولية
           </p>
-          <img alt="أسرة محمد علي" className="hero-img w-80 sm:w-80 md:w-96 lg:w-96 xl:w-96 rounded-2xl shadow-2xl opacity-70" id="image" src="/src/assets/img/castle.png"></img>
+          <img alt="أسرة محمد علي" className="hero-img w-80 sm:w-80 md:w-96 lg:w-96 xl:w-96 rounded-2xl shadow-2xl opacity-70" id="image" src = {img}></img>
           
           <div className="hero-buttons mt-12">
             <button 
@@ -38,7 +40,7 @@ const Home = () => {
       <section id="history" className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-primary-color text-center mb-16">نظرة تاريخية</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2">
             <One />
             <Two />
           </div>

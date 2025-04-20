@@ -1,17 +1,6 @@
-import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Data from './data';
 
-interface PersonType {
-  id: number;
-  name: string;
-  title: string;
-  text: string;
-  date: string;
-  img: string;
-  details?: string;
-  accomplishments?: string[];
-}
 
 const PersonalityDetails = () => {
   const { id } = useParams();

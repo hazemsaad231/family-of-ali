@@ -56,6 +56,36 @@ const Navbar = () => {
         }`}>
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between">
+
+                    {/* Desktop Navigation */}
+                    <div className="hidden md:flex items-center gap-6">
+                        <button 
+                            className={`nav-btn ${activeSection === 'home' ? 'active' : ''}`}
+                            onClick={() => handleNavClick('home')}
+                        >
+                            الرئيسية
+                        </button>
+                        <button 
+                            className={`nav-btn ${activeSection === 'history' ? 'active' : ''}`}
+                            onClick={() => handleNavClick('history')}
+                        >
+                            النظرة التاريخية
+                        </button>
+                        <button 
+                            className={`nav-btn ${activeSection === 'personalities' ? 'active' : ''}`}
+                            onClick={() => handleNavClick('personalities')}
+                        >
+                            الشخصيات
+                        </button>
+                        <button 
+                            className={`nav-btn ${activeSection === 'achievements' ? 'active' : ''}`}
+                            onClick={() => handleNavClick('achievements')}
+                        >
+                            الإنجازات
+                        </button>
+                    </div>
+
+
                     {/* Logo */}
                     <div className="flex items-center">
                         <img 
@@ -95,33 +125,6 @@ const Navbar = () => {
                         </svg>
                     </button>
 
-                    {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center gap-6">
-                        <button 
-                            className={`nav-btn ${activeSection === 'home' ? 'active' : ''}`}
-                            onClick={() => handleNavClick('home')}
-                        >
-                            الرئيسية
-                        </button>
-                        <button 
-                            className={`nav-btn ${activeSection === 'history' ? 'active' : ''}`}
-                            onClick={() => handleNavClick('history')}
-                        >
-                            النظرة التاريخية
-                        </button>
-                        <button 
-                            className={`nav-btn ${activeSection === 'personalities' ? 'active' : ''}`}
-                            onClick={() => handleNavClick('personalities')}
-                        >
-                            الشخصيات
-                        </button>
-                        <button 
-                            className={`nav-btn ${activeSection === 'achievements' ? 'active' : ''}`}
-                            onClick={() => handleNavClick('achievements')}
-                        >
-                            الإنجازات
-                        </button>
-                    </div>
                 </div>
 
                 {/* Mobile Navigation */}

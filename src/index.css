@@ -1,68 +1,618 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+  }
 
-    .vertical-timeline--two-columns .vertical-timeline-element-content {
-        padding: 0em !important;
-    }
-    .vertical-timeline-element {
-        margin: 2em 0;
-        padding: 0 !important;
-    }
-    .vertical-timeline-element-content {
-        margin-left: 0px !important;
-   
-    }
-  
-body {
-    background: url("../src/assets/img/innerBackground.jpg") no-repeat center center fixed;
+  body {
+    @apply min-h-screen flex flex-col text-text-color;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../src/assets/img/innerBackground.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
 
+  main {
+    @apply flex-1;
+  }
 }
 
+@layer components {
+  .hero {
+    @apply relative min-h-screen flex items-center justify-center text-center text-cream p-2.5;
+  }
 
+  .hero::before {
+    @apply content-[''] absolute inset-0;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+  }
+
+  .hero-content {
+    @apply relative z-10 max-w-3xl mx-auto;
+  }
+
+  .hero-title {
+    @apply text-5xl font-bold mb-6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-description {
+    @apply text-xl leading-relaxed mb-8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-buttons {
+    @apply flex gap-4 justify-center;
+  }
+
+  .hero-btn {
+    @apply px-8 py-3 rounded-lg font-semibold transition-all duration-300;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .hero-btn-primary {
+    @apply bg-primary text-cream hover:bg-secondary transform hover:-translate-y-0.5;
+  }
+
+  .hero-btn-secondary {
+    @apply bg-opacity-10 text-cream border-2 border-opacity-30 backdrop-blur-sm hover:bg-opacity-20 transform hover:-translate-y-0.5;
+  }
+
+  .card {
+    @apply bg-cream bg-opacity-90 rounded-2xl p-6 shadow-md border border-light-blue transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+}
+
+:root {
+  --primary-color: #1a237e;
+  --secondary-color: #3949ab; 
+  --text-color: #1a237e; 
+  --light-blue: #e8eaf6;
+  --cream: #f5f7ff; 
+  --dark-blue: #0d47a1;
+  --transition-speed: 0.3s;
+  --border-radius: 1rem;
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  font-family: "Cairo", sans-serif;
+}
+
+/* Base Styles */
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../src/assets/img/innerBackground.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+  direction: rtl;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--cream);
+  padding: 10px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero .hero-img {
+  max-width: 100%;
+  height: auto;
+  animation-name: stretch;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: initial;
+  margin: 0 auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.hero-btn {
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hero-btn-primary {
+  background: var(--primary-color);
+  color: var(--cream);
+}
+
+.hero-btn-primary:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.hero-btn-secondary {
+  background: rgba(255, 248, 220, 0.1);
+  color: var(--cream);
+  border: 2px solid rgba(255, 248, 220, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+.hero-btn-secondary:hover {
+  background: rgba(255, 248, 220, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Typography */
+.title {
+  font: 700 2.5rem 'Markazi Text';
+  color: var(--primary-color);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: var(--secondary-color);
+  border-radius: 2px;
+}
+
+.text-content {
+  color: var(--text-color);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.text-content h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.text-content p {
+  margin-bottom: 1rem;
+}
+
+/* Card Base Styles */
+.card {
+  background: rgba(245, 247, 255, 0.9);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--light-blue);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Specialized Card Styles */
+.achievement-card,
+.personality-card {
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.achievement-card::before,
+.personality-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  transition: height var(--transition-speed) ease;
+}
+
+.achievement-card:hover::before,
+.personality-card:hover::before {
+  height: 6px;
+}
+
+.achievement-card .icon,
+.personality-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  transition: transform var(--transition-speed) ease;
+}
+
+.achievement-card:hover .icon,
+.personality-card:hover .icon {
+  transform: scale(1.1);
+}
+
+.personality-card img {
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.personality-card:hover img {
+  transform: scale(1.1);
+}
+
+.personality-card .content {
+  padding: 1.5rem;
+  background: linear-gradient(to bottom, transparent, rgba(43, 24, 16, 0.05));
+}
+
+/* Personality Card Styles */
+.personality-card-horizontal {
+  position: relative;
+  overflow: hidden;
+}
+
+.personality-card-horizontal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  z-index: 10;
+  transition: height 0.3s ease;
+}
+
+.personality-card-horizontal:hover::before {
+  height: 5px;
+}
+
+.personality-card-horizontal img {
+  transition: transform 0.7s ease;
+}
+
+.personality-card-horizontal:hover img {
+  transform: scale(1.1);
+}
+
+.personality-card-horizontal .btn {
+  opacity: 0.9;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.personality-card-horizontal:hover .btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button Styles */
+.btn {
+  background: var(--primary-color);
+  color: var(--cream);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all var(--transition-speed) ease;
+  border: 2px solid transparent;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+  border-color: var(--light-blue);
+}
+
+/* Footer Styles */
+.footer {
+  background: rgba(13, 71, 161, 0.95);
+  color: var(--cream);
+  padding: 3rem 0;
+  margin-top: auto;
+  border-top: 3px solid var(--light-blue);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.footer-section {
+  padding: 1rem;
+  color: var(--cream);
+}
+
+.footer-title {
+  position: relative;
+  color: var(--light-blue);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--secondary-color);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: var(--cream);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+.footer-links a:hover {
+  color: var(--light-blue);
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  color: var(--cream);
+  font-size: 1.5rem;
+  transition: color var(--transition-speed) ease;
+}
+
+.social-icon:hover {
+  color: var(--light-blue);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(232, 234, 246, 0.2);
+}
+
+/* Utility Classes */
+.section-divider {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, transparent, var(--light-blue), transparent);
+  margin: 2rem 0;
+}
+
+.quote-box {
+  background: rgba(245, 247, 255, 0.9);
+  border-right: 4px solid var(--primary-color);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  position: relative;
+}
+
+.quote-box::before {
+  content: '"';
+  font-size: 4rem;
+  color: var(--primary-color);
+  position: absolute;
+  top: -1rem;
+  left: 1rem;
+  opacity: 0.3;
+}
+
+.timeline-container {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: var(--light-blue);
+}
+
+/* Scrollbar Styles */
 @layer utilities {
     .custom-scrollbar::-webkit-scrollbar {
       width: 8px;
     }
   
     .custom-scrollbar::-webkit-scrollbar-track {
-      background: gray;
+    background: var(--cream);
       border-radius: 10px;
     }
   
     .custom-scrollbar::-webkit-scrollbar-thumb {
-      background-color: indigo;
+    background-color: var(--primary-color);
       border-radius: 10px;
     }
   
     .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-      background-color: indigo;
-    }
+    background-color: var(--secondary-color);
   }
-  
-  .title{
-    font: 700 2.2rem MarkaziText-Bold;
-    color: #000;
-    text-align: center;
-}
-
-#image {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  animation-name: stretch;
-  animation-duration: 4s; 
-  animation-timing-function: ease-out; 
-  animation-iteration-count:initial;
 }
 
 @keyframes stretch {
   0% {
-    transform: scale(.2);
-   
+      transform: scale(.2)
   }
-  100% {
-    transform: scale(1);
-   
+
+  to {
+      transform: scale(1)
   }
 }
+
+/* Navbar Styles */
+.nav-btn {
+    padding: 0.75rem 1.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .nav-btn {
+        width: auto;
+    }
+}
+
+.nav-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+.nav-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--primary-color), 0 0 0 4px rgba(26, 35, 126, 0.2);
+}
+
+.nav-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Menu Animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.md\:hidden {
+    animation: slideDown 0.3s ease-out;
+}
+
+/* Section Styles */
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+/* Historical Overview Section */
+
+
+#history .bg-white {
+    backdrop-filter: blur(4px);
+}
+
+/* Achievement Card Animations */
+.achievement-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.achievement-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.achievement-card:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.achievement-card:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+.achievement-card:nth-child(4) {
+  transition-delay: 0.6s;
+}
+
+.achievement-card:nth-child(5) {
+  transition-delay: 0.8s;
+}
+
+.achievement-card:nth-child(6) {
+  transition-delay: 1s;
+}
+

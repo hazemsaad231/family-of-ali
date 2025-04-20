@@ -1,50 +1,51 @@
+import React from 'react';
 
-import image from "../../assets/img/castle.png";
-
-  
 const One = () => {
-  return (
-    <div className="flex flex-col items-center justify-center my-8">
-  
-      <div>
-  {/* Hero Title */}
-  <h1 className="title">
-        أسرة محمد علي
-      </h1>
+    return (
+        <div className="bg-white rounded-2xl shadow-xl p-8 transform transition-all duration-300 hover:scale-[1.02]">
+            <h3 className="text-2xl font-bold text-primary-color mb-6">التأسيس والنهضة</h3>
+            <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary-color/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-2xl">١</span>
+                    </div>
+                    <div>
+                        <h4 className="text-xl font-semibold text-primary-color mb-2">وصول محمد علي</h4>
+                        <p className="text-gray-700 leading-relaxed">
+                            وصل محمد علي باشا إلى مصر عام ١٨٠٥، وبدأ في بناء دولة حديثة قوية. قام بإصلاح النظام الإداري
+                            وتحديث الجيش المصري ليكون قوة عسكرية فاعلة في المنطقة.
+                        </p>
+                    </div>
+                </div>
 
-      {/* Subtitle */}
-      <p className="text-lg md:text-xl text-gray-700 max-w-2xl text-center p-2 ">
-      رحلة عبر العصور لاكتشاف قصة الأسرة التي أسست مصر الحديثة وساهمت في نهضة الدولة اقتصاديًا واجتماعيًا، حيث أعادت هيكلة التعليم، وأطلقت مشاريع صناعية ضخمة، واهتمت بتطوير الجيش ليكون قوة فاعلة على الساحة الدولية
+                <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary-color/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-2xl">٢</span>
+                    </div>
+                    <div>
+                        <h4 className="text-xl font-semibold text-primary-color mb-2">الإصلاحات الاقتصادية</h4>
+                        <p className="text-gray-700 leading-relaxed">
+                            أطلق محمد علي مشروعاً طموحاً للتحديث الاقتصادي شمل إنشاء المصانع والمدارس والمستشفيات.
+                            اهتم بتطوير الزراعة وإدخال المحاصيل الجديدة مثل القطن.
+                        </p>
+                    </div>
+                </div>
 
-      </p>
-{/* Image */}
-<img
-        src={image}
-        alt="أسرة محمد علي"
-        className="w-80 sm:w-80 md:w-96 lg:w-96 xl:w-96 rounded-2xl shadow-2xl opacity-70"
-        id="image"
-      />
-      {/* CTA Buttons */}
-      <div className="flex flex-col justify-center items-center md:flex-row gap-4 my-8">
-        <button className="bg-gray-800 hover:bg-gray-900 text-white font-medium py-3 px-6 rounded-xl shadow-lg transition">
-        <a href="#home">
-        ابرز الشخصيات
-              </a>
-        </button>
-        <button className="bg-white hover:bg-gray-100 text-gray-800 font-medium py-3 px-6 rounded-xl shadow-lg border transition">
-         <a href="#about">
-         أبرز الإنجازات
-          </a>
-        </button>
-      </div>
-      </div>
-    
-
-    
-    </div>
-  );
+                <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary-color/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-2xl">٣</span>
+                    </div>
+                    <div>
+                        <h4 className="text-xl font-semibold text-primary-color mb-2">التعليم والصحة</h4>
+                        <p className="text-gray-700 leading-relaxed">
+                            أسس نظاماً تعليمياً حديثاً وأرسل البعثات التعليمية إلى أوروبا. أنشأ المستشفيات
+                            والمدارس الطبية لتطوير القطاع الصحي في مصر.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 };
 
-export default One;
-
-
+export default One; 

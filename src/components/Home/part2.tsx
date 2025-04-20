@@ -1,89 +1,51 @@
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import Data from '../data';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-
-
-interface Items {
-  id: number;
-  name: string;
-  date: string;
-  title: string;
-  text: string;
-  img: string;
-}
+import React from 'react';
 
 const Two = () => {
-
-  const myFirst = Data.slice(0, 4);
-
- const [IsToggle, setIsToggle] = useState(true);
-
-  const Toggle = () => {
-    setIsToggle(!IsToggle);
-  }
-
-  const RenderElement = ( items : Items[] ) => {
-    
     return (
-      <div>
-      {items.map((data, index) => (
+        <div className="bg-white rounded-2xl shadow-xl p-8 transform transition-all duration-300 hover:scale-[1.02]">
+            <h3 className="text-2xl font-bold text-primary-color mb-6">التطور والتراث</h3>
+            <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary-color/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-2xl">٤</span>
+                    </div>
+                    <div>
+                        <h4 className="text-xl font-semibold text-primary-color mb-2">التراث المعماري</h4>
+                        <p className="text-gray-700 leading-relaxed">
+                            ترك أفراد الأسرة إرثاً معمارياً عظيماً يشمل القصور والمباني التاريخية مثل قصر عابدين
+                            وقصر القبة وقصر المنتزه، التي تعكس الطراز المعماري الفريد لتلك الحقبة.
+                        </p>
+                    </div>
+                </div>
 
-<VerticalTimelineElement
-  contentStyle={{ background: "white" }}
-  key={index}
-  iconStyle={{ background: "red" , display: "none" }}
-  position={index % 2 === 0 ? "right" : "left"}  
->
+                <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary-color/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-2xl">٥</span>
+                    </div>
+                    <div>
+                        <h4 className="text-xl font-semibold text-primary-color mb-2">التراث الثقافي</h4>
+                        <p className="text-gray-700 leading-relaxed">
+                            أسهمت الأسرة في تطوير الفنون والآداب، ودعمت الحركة الثقافية في مصر. أنشأت المكتبات
+                            والمتاحف ودعمت الفنانين والمفكرين.
+                        </p>
+                    </div>
+                </div>
 
-  <div className="flex w-full items-center justify-center gap-2 flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row">
-  <img src={data.img} alt=""  className='w-[100%] sm:w-[100%] md:w-60 lg:w-60 xl:w-60 h-68'/>
+                <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary-color/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-2xl">٦</span>
+                    </div>
+                    <div>
+                        <h4 className="text-xl font-semibold text-primary-color mb-2">الإرث السياسي</h4>
+                        <p className="text-gray-700 leading-relaxed">
+                            أسست الأسرة نظاماً سياسياً حديثاً في مصر، وتركت أثراً عميقاً في تطور الدولة المصرية
+                            الحديثة وعلاقاتها الدولية.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
-    <div className='text-right p-4 w-[100%]'>
-      <div className='mb-4'>
-      <h1 className='font-bold'>{data.name}</h1>
-    <h1 className='font-light'>{data.date}</h1>
-  <h3 className='text-sm'>{data.title}</h3>
-  <h6 className='text-[11px]'>
-    {data.text}
-  </h6>
-      </div>
-  <Link className='border p-1 border-gray-300 rounded-md  cursor-pointer text-sm hover:bg-gray-100' to={`/details/${data.id}`}>اقراء المزيد</Link>
-  </div>
-
-
-  </div>
-  
-</VerticalTimelineElement>
-))}
-  </div>
-    )
-  }
-
-
-
-    return (
-        <>
-  <div className="home flex items-center justify-center" id='home'>
-<VerticalTimeline lineColor="transparent" >
-<h1 className='title my-8'>ابرز الشخصيات</h1>
-
-{IsToggle ? RenderElement(myFirst) : RenderElement(Data)}
-
-   
-    </VerticalTimeline>
-
-</div>
-<div className='flex items-center justify-center'>
-<button className='bg-gray-800 hover:bg-gray-900 text-white font-medium py-3 px-6 rounded-xl shadow-lg transition cursor-pointer' onClick={()=>Toggle()}>
-    {IsToggle ? "عرض المزيد" : " عرض اقل"}</button>
-
-</div>
-
-        </>
-
-    )
-}
-
-export default Two
+export default Two; 

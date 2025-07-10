@@ -132,11 +132,9 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Navigation */}
-                <div className={`md:hidden transition-all duration-300 z-50 bg-cream/95 backdrop-blur-md shadow-lg ${
-                    isMobileMenuOpen 
-                        ? 'max-h-96 opacity-100' 
-                        : 'max-h-0 opacity-0'
-                }`}>
+                {isMobileMenuOpen && (
+                    <div className={`md:hidden transition-all duration-300 z-50 bg-cream/95 backdrop-blur-md shadow-lg`}
+                >
                     <div className="flex flex-col gap-4 py-4">
                         <Link to="/">
                         <button 
@@ -166,6 +164,8 @@ const Navbar = () => {
                         </button>
                     </div>
                 </div>
+                )}
+                
             </div>
         </nav>
     )

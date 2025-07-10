@@ -8,7 +8,6 @@
  import img8 from "../assets/img/img8.jpeg"
  import img9 from "../assets/img/img9.jpeg"
  import img10 from "../assets/img/img10.jpeg"
- import img11 from "../assets/img/img11.jpeg"
 
 
  const Data = [

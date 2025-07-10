@@ -84,10 +84,6 @@ main {
 .hero .hero-img {
   max-width: 100%;
   height: auto;
-  animation-name: stretch;
-  animation-duration: 4s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: initial;
   margin: 0 auto;
 }
 

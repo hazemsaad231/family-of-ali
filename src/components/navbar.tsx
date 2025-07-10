@@ -61,7 +61,7 @@ const Navbar = () => {
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center gap-6">
-                        <Link to="/" className="text-primary-color">
+                        <Link to="/" >
                         <button 
                             className={`nav-btn ${activeSection === 'home' ? 'active' : ''}`}
                             onClick={() => handleNavClick('home')}
@@ -138,7 +138,7 @@ const Navbar = () => {
                         : 'max-h-0 opacity-0'
                 }`}>
                     <div className="flex flex-col gap-4 py-4">
-                        <Link to="/" className="text-primary-color">
+                        <Link to="/">
                         <button 
                             className={`nav-btn text-center ${activeSection === 'home' ? 'active' : ''}`}
                             onClick={() => handleNavClick('home')}

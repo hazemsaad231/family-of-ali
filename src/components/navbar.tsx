@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import logo from "../assets/img/logo.png"
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -60,12 +61,14 @@ const Navbar = () => {
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center gap-6">
+                        <Link to="/" className="text-primary-color">
                         <button 
                             className={`nav-btn ${activeSection === 'home' ? 'active' : ''}`}
                             onClick={() => handleNavClick('home')}
                         >
                             الرئيسية
                         </button>
+                        </Link>
                         <button 
                             className={`nav-btn ${activeSection === 'history' ? 'active' : ''}`}
                             onClick={() => handleNavClick('history')}
@@ -135,12 +138,14 @@ const Navbar = () => {
                         : 'max-h-0 opacity-0'
                 }`}>
                     <div className="flex flex-col gap-4 py-4">
+                        <Link to="/" className="text-primary-color">
                         <button 
                             className={`nav-btn text-center ${activeSection === 'home' ? 'active' : ''}`}
                             onClick={() => handleNavClick('home')}
                         >
                             الرئيسية
                         </button>
+                        </Link>
                         <button 
                             className={`nav-btn text-center ${activeSection === 'history' ? 'active' : ''}`}
                             onClick={() => handleNavClick('history')}

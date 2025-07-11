@@ -23,7 +23,7 @@ const Footer = () => {
           <h3 className="footer-title">تواصل معنا</h3>
           <ul className="footer-links">
             <li>البريد الإلكتروني: info@family.com</li>
-            <li>الهاتف: +20 123 456 789</li>
+            <li>الهاتف : 01062588052</li>
             <li>العنوان: القاهرة، مصر</li>
           </ul>
           <div className="footer-social">

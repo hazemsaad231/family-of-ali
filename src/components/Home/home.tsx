@@ -9,31 +9,33 @@ const Home = () => {
   return (
     <div className="min-h-screen py-24">
       {/* Hero Section */}
-      <section id="home" className="hero">
-        <div className="hero-content">
-          <h1 className="hero-title">أسرة محمد علي</h1>
-          <p className="hero-description">
+      <section className='flex justify-center items-center py-6' style={{ background: `linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5), transparent)` }}>
+        <div className="z-10 text-center max-w-3xl mx-auto px-4 text-white">
+          <h1 className="font-bold text-[3rem] sm:text-[3.5rem]  md:text-[5rem]  mb-3" style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.9)" }}>أسرة محمد علي</h1>
+
+          <p className="font-serif text-lg mb-3" style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.9)" }}>
             رحلة عبر العصور لاكتشاف قصة الأسرة التي أسست مصر الحديثة وساهمت في
             نهضة الدولة اقتصادياً واجتماعياً، حيث أعادت هيكلة التعليم، وأطلقت مشاريع
             صناعية ضخمة، واهتمت بتطوير الجيش ليكون قوة فاعلة على الساحة الدولية
           </p>
-          <img alt="أسرة محمد علي" className="hero-img w-80 sm:w-80 md:w-96 lg:w-96 xl:w-96 rounded-2xl shadow-2xl opacity-70" id="image" src = {img}></img>
+          <img alt="أسرة محمد علي" className="hero-img w-80 sm:w-80 md:w-96 lg:w-96 xl:w-96 rounded-2xl shadow-2xl opacity-60 m-auto" src = {img}></img>
           
-          <div className="hero-buttons mt-12">
+          <div className="flex gap-2 justify-center mt-12">
             <button 
-              className="hero-btn hero-btn-primary"
+              className="bg-[--primary-color] py-2 px-4 rounded-lg hover:bg-blue-800 hover:translate-y-[-4px] transition-colors duration-100"
               onClick={() => document.getElementById('history')?.scrollIntoView({ behavior: 'smooth' })}
             >
               النظرة التاريخية
             </button>
             <button 
-              className="hero-btn hero-btn-secondary"
+              className="bg-[--secondary-color] py-2 px-4 rounded-lg hover:bg-blue-700 hover:translate-y-[-4px] transition-colors duration-100"
               onClick={() => document.getElementById('personalities')?.scrollIntoView({ behavior: 'smooth' })}
             >
               أبرز الشخصيات
             </button>
           </div>
         </div>
+
       </section>
 
       {/* Historical Overview Section */}

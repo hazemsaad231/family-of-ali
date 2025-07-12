@@ -31,96 +31,8 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 main {
   flex: 1;
-}
-
-
-
-/* Hero Section */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--cream);
-  padding: 10px;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero-title {
-  font-size: 3.5rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.hero-description {
-  font-size: 1.25rem;
-  line-height: 1.8;
-  margin-bottom: 2rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.hero .hero-img {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.hero-btn {
-  padding: 0.75rem 2rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.hero-btn-primary {
-  background: var(--primary-color);
-  color: var(--cream);
-}
-
-.hero-btn-primary:hover {
-  background: var(--secondary-color);
-  transform: translateY(-2px);
-}
-
-.hero-btn-secondary {
-  background: rgba(255, 248, 220, 0.1);
-  color: var(--cream);
-  border: 2px solid rgba(255, 248, 220, 0.3);
-  backdrop-filter: blur(4px);
-}
-
-.hero-btn-secondary:hover {
-  background: rgba(255, 248, 220, 0.2);
-  transform: translateY(-2px);
 }
 
 /* Typography */
@@ -160,7 +72,7 @@ main {
 
 .text-content p {
   margin-bottom: 1rem;
-}
+} 
 
 /* Card Base Styles */
 .card {
@@ -178,7 +90,7 @@ main {
 }
 
 /* Specialized Card Styles */
-.achievement-card,
+ .achievement-card,
 .personality-card {
   position: relative;
   overflow: hidden;
@@ -232,7 +144,7 @@ main {
 }
 
 /* Personality Card Styles */
-.personality-card-horizontal {
+ .personality-card-horizontal {
   position: relative;
   overflow: hidden;
 }
@@ -289,10 +201,10 @@ main {
   background: var(--secondary-color);
   transform: translateY(-2px);
   border-color: var(--light-blue);
-}
+} 
 
 /* Footer Styles */
-.footer {
+ .footer {
   background: rgba(13, 71, 161, 0.95);
   color: var(--cream);
   padding: 3rem 0;
@@ -380,9 +292,9 @@ main {
   height: 3px;
   background: linear-gradient(to right, transparent, var(--light-blue), transparent);
   margin: 2rem 0;
-}
+} */
 
-.quote-box {
+ .quote-box {
   background: rgba(245, 247, 255, 0.9);
   border-right: 4px solid var(--primary-color);
   padding: 1.5rem;
@@ -418,7 +330,7 @@ main {
 }
 
 /* Scrollbar Styles */
-@layer utilities {
+/* @layer utilities {
     .custom-scrollbar::-webkit-scrollbar {
       width: 8px;
     }
@@ -446,7 +358,7 @@ main {
   to {
       transform: scale(1)
   }
-}
+}  */
 
 /* Navbar Styles */
 .nav-btn {
@@ -501,7 +413,7 @@ main {
 }
 
 /* Section Styles */
-section {
+ section {
     position: relative;
     overflow: hidden;
 }
@@ -547,5 +459,4 @@ section[id] {
 
 .achievement-card:nth-child(6) {
   transition-delay: 1s;
-}
-
+} 

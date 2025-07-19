@@ -1,13 +1,13 @@
- import img1 from "../assets/img/mohamed.jpeg"
- import img2 from "../assets/img/img2.jpg"
- import img3 from "../assets/img/img3.jpeg"
- import img4 from "../assets/img/img4.jpeg"
- import img5 from "../assets/img/img5.jpeg"
- import img6 from "../assets/img/img6.jpeg"
- import img7 from "../assets/img/img7.jpeg"
- import img8 from "../assets/img/img8.jpeg"
- import img9 from "../assets/img/img9.jpeg"
- import img10 from "../assets/img/img10.jpeg"
+ import img1 from "../../assets/img/mohamed.jpeg"
+ import img2 from "../../assets/img/img2.jpg"
+ import img3 from "../../assets/img/img3.jpeg"
+ import img4 from "../../assets/img/img4.jpeg"
+ import img5 from "../../assets/img/img5.jpeg"
+ import img6 from "../../assets/img/img6.jpeg"
+ import img7 from "../../assets/img/img7.jpeg"
+ import img8 from "../../assets/img/img8.jpeg"
+ import img9 from "../../assets/img/img9.jpeg"
+ import img10 from "../../assets/img/img10.jpeg"
 
 
  const Data = [

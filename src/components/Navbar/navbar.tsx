@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import logo from "../assets/img/logo.png"
+import logo from "../../assets/img/logo.png";
 import { Link } from 'react-router-dom';
 
 
@@ -66,7 +66,9 @@ const Navbar = () => {
                             className={`nav-btn ${activeSection === 'home' ? 'active' : ''}`}
                             onClick={() => handleNavClick('home')}
                         >
+                            <a href="#home">
                             الرئيسية
+                            </a>
                         </button>
                         </Link>
                         <button 
@@ -141,7 +143,9 @@ const Navbar = () => {
                             className={`nav-btn text-center ${activeSection === 'home' ? 'active' : ''}`}
                             onClick={() => handleNavClick('home')}
                         >
+                             <a href="#home">
                             الرئيسية
+                            </a>
                         </button>
                         </Link>
                         <button 

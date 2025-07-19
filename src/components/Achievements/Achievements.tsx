@@ -111,7 +111,7 @@ const Achievements = () => {
             {achievements.map((achievement, index) => (
               <div 
                 key={index} 
-                className="card achievement-card group"
+                className="bg-white shadow-lg rounded-lg p-6 transition-transform duration-500 hover:scale-105 border-t-4 border-blue-800"
               >
                 <div className="flex items-center mb-4">
                   <span className="text-4xl mr-4 group-hover:scale-110 transition-transform">{achievement.icon}</span>

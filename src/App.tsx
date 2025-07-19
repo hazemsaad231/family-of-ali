@@ -1,9 +1,8 @@
 import './App.css'
-import Details from './components/details'
 import Home from './components/Home/home'
-import Master from './components/master'
+import Master from './components/Outlet/master'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import PersonalityDetails from './components/PersonalityDetails'
+import PersonalityDetails from './components/Personalities/PersonalityDetails'
 
 function App() {
 
@@ -14,7 +13,6 @@ function App() {
       children:[
         {index: true, element: <Home/>},
         {path: "home", element: <Home/>},
-        {path: "details/:id", element: <Details/>},
         {path: "personality/:id", element: <PersonalityDetails />},
       ]
     }

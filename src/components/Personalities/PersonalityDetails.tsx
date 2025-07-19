@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import Data from './data';
+import Data from '../Data/data';
 
 
 const PersonalityDetails = () => {
@@ -62,7 +62,7 @@ const PersonalityDetails = () => {
             {/* Accomplishments */}
             {person.accomplishments && (
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-4xl font-bold text-navy-900 mb-12 px-4 font-medium">أبرز الإنجازات</h2>
+                <h2 className="text-4xl font-bold text-navy-900 mb-12 px-4">أبرز الإنجازات</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   {person.accomplishments.map((accomplishment, index) => (
                     <div
@@ -81,7 +81,7 @@ const PersonalityDetails = () => {
             <div className="mt-12 text-center">
               <Link
                 to="/"
-                className="btn bg-primary text-white hover:bg-primary/90 transition-colors duration-300 shadow-md hover:shadow-lg"
+                className="bg-blue-900 text-cream px-6 py-3 rounded-lg font-bold text-xl hover:bg-blue-800 transition-colors duration-300"
               >
                 العودة للرئيسية
               </Link>

@@ -1,5 +1,5 @@
-import Achievements from '../Achievements';
-import Personalities from '../Personalities';
+import Achievements from '../Achievements/Achievements';
+import Personalities from '../Personalities/Personalities';
 import One from "./part1";
 import Two from "./part2";
 import img from "../../assets/img/castle.png";
@@ -7,7 +7,7 @@ import img from "../../assets/img/castle.png";
 
 const Home = () => {
   return (
-    <div className="min-h-screen py-24">
+    <div className="min-h-screen py-24" id="home">
       {/* Hero Section */}
       <section className='flex justify-center items-center py-6' style={{ background: `linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5), transparent)` }}>
         <div className="z-10 text-center max-w-3xl mx-auto px-4 text-white">
@@ -18,7 +18,7 @@ const Home = () => {
             نهضة الدولة اقتصادياً واجتماعياً، حيث أعادت هيكلة التعليم، وأطلقت مشاريع
             صناعية ضخمة، واهتمت بتطوير الجيش ليكون قوة فاعلة على الساحة الدولية
           </p>
-          <img alt="أسرة محمد علي" className="hero-img w-80 sm:w-80 md:w-96 lg:w-96 xl:w-96 rounded-2xl shadow-2xl opacity-60 m-auto" src = {img}></img>
+          <img alt="أسرة محمد علي" className="hero-img w-80 sm:w-80 md:w-96 lg:w-96 xl:w-96 rounded-2xl shadow-2xl opacity-65 m-auto" src = {img}></img>
           
           <div className="flex gap-2 justify-center mt-12">
             <button 

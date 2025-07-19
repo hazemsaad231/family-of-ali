@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Data from './data';
+import Data from '../Data/data';
 
 interface PersonType {
   id: number;
@@ -21,15 +21,14 @@ const Personalities = () => {
           {Data.map((person: PersonType) => (
             <div
               key={person.id}
-              className="personality-card-horizontal group"
             >
-              <div className="flex flex-col md:flex-row bg-cream/95 rounded-xl overflow-hidden shadow-lg transition-transform duration-500 hover:scale-[1.02]">
+              <div className="h-full sm:h-full md:h-[28rem] flex flex-col md:flex-row bg-cream rounded-xl overflow-hidden shadow-lg transition-transform duration-500 hover:scale-[1.04]">
                 <div className="md:w-1/3 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-brown-900/20 to-transparent z-10" />
                   <img
                     src={person.img}
                     alt={person.name}
-                    className="w-full h-64 md:h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-80 sm:h-80 md:h-full object-center transition-transform duration-700 group-hover:scale-110"
                   />
                 </div>
                 <div className="md:w-2/3 p-6 md:p-8 flex flex-col justify-center">
@@ -58,7 +57,7 @@ const Personalities = () => {
                   <div className="mt-6">
                     <Link 
                       to={`/personality/${person.id}`}
-                      className="btn bg-brown-900 text-cream hover:bg-brown-800 transition-colors duration-300"
+                      className="text-white bg-blue-900 rounded-lg hover:bg-blue-800 font-bold p-4"
                     >
                       اقرأ المزيد
                     </Link>

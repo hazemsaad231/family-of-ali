@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"
-import Navbar from "./navbar"
-import Footer from "./Footer"
+import Navbar from "../Navbar/navbar"
+import Footer from "../Footer/Footer"
 
 const Master = () => {
     return (

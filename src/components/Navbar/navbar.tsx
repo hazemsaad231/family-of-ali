@@ -66,9 +66,7 @@ const Navbar = () => {
                             className={`nav-btn ${activeSection === 'home' ? 'active' : ''}`}
                             onClick={() => handleNavClick('home')}
                         >
-                            <a href="#home">
                             الرئيسية
-                            </a>
                         </button>
                         </Link>
                         <button 
@@ -143,9 +141,7 @@ const Navbar = () => {
                             className={`nav-btn text-center ${activeSection === 'home' ? 'active' : ''}`}
                             onClick={() => handleNavClick('home')}
                         >
-                             <a href="#home">
                             الرئيسية
-                            </a>
                         </button>
                         </Link>
                         <button 

@@ -7,7 +7,7 @@ import img from "../../assets/img/castle.png";
 
 const Home = () => {
   return (
-    <div className="min-h-screen py-24" id="home">
+    <div className="min-h-screen py-24">
       {/* Hero Section */}
       <section className='flex justify-center items-center py-6' style={{ background: `linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5), transparent)` }}>
         <div className="z-10 text-center max-w-3xl mx-auto px-4 text-white">

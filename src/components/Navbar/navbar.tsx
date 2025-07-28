@@ -17,7 +17,7 @@ const Navbar = () => {
             }
             
             // تحديث القسم النشط بناءً على موقع التمرير
-            const sections = ['home', 'history', 'personalities', 'achievements'];
+            const sections = ['home', 'history','personalities', 'achievements'];
             for (const section of sections) {
                 const element = document.getElementById(section);
                 if (element) {
@@ -36,56 +36,60 @@ const Navbar = () => {
 
     const handleNavClick = (section: string) => {
         setActiveSection(section);
-        setIsMobileMenuOpen(false);
-        const element = document.getElementById(section);
-        if (element) {
-            const offset = 80; // ارتفاع الشريط العلوي
-            const elementPosition = element.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - offset;
-            
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
+        setIsMobileMenuOpen(false)
+           
         }
-    };
+    
+
 
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
             isScrolled 
-                ? 'bg-cream/95 backdrop-blur-md shadow-lg py-4' 
-                : 'bg-transparent py-6 '
+                ? 'bg-cream/95 backdrop-blur-md shadow-lg py-2' 
+                : 'bg-transparent py-4 '
         }`}>
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between">
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center gap-6">
-                        <Link to="/" >
+                                              
                         <button 
                             className={`nav-btn ${activeSection === 'home' ? 'active' : ''}`}
                             onClick={() => handleNavClick('home')}
-                        >
-                            الرئيسية
-                        </button>
+                        >  <Link to="/" >
+                            <a href="#home">
+                           الرئيسية 
+                            </a>
                         </Link>
+                        </button>
+                       
                         <button 
                             className={`nav-btn ${activeSection === 'history' ? 'active' : ''}`}
                             onClick={() => handleNavClick('history')}
                         >
+                            <a href="#history">
                             النظرة التاريخية
+
+                            </a>
                         </button>
+
+
                         <button 
                             className={`nav-btn ${activeSection === 'personalities' ? 'active' : ''}`}
                             onClick={() => handleNavClick('personalities')}
                         >
-                            الشخصيات
+                            <a href="#personalities">
+الشخصيات
+                            </a>
+                            
                         </button>
                         <button 
                             className={`nav-btn ${activeSection === 'achievements' ? 'active' : ''}`}
                             onClick={() => handleNavClick('achievements')}
                         >
-                            الإنجازات
+                            <a href="#achievements"> الإنجازات</a>
+                           
                         </button>
                     </div>
 
@@ -141,26 +145,33 @@ const Navbar = () => {
                             className={`nav-btn text-center ${activeSection === 'home' ? 'active' : ''}`}
                             onClick={() => handleNavClick('home')}
                         >
-                            الرئيسية
+                             <a href="#home">
+                           الرئيسية 
+                            </a>
                         </button>
                         </Link>
                         <button 
                             className={`nav-btn text-center ${activeSection === 'history' ? 'active' : ''}`}
                             onClick={() => handleNavClick('history')}
                         >
+                             <a href="#history">
                             النظرة التاريخية
+
+                            </a>
                         </button>
                         <button 
                             className={`nav-btn text-center ${activeSection === 'personalities' ? 'active' : ''}`}
                             onClick={() => handleNavClick('personalities')}
                         >
-                            الشخصيات
+                             <a href="#personalities">
+                                  الشخصيات
+                            </a>
                         </button>
                         <button 
                             className={`nav-btn text-center ${activeSection === 'achievements' ? 'active' : ''}`}
                             onClick={() => handleNavClick('achievements')}
                         >
-                            الإنجازات
+                             <a href="#achievements"> الإنجازات</a>
                         </button>
                     </div>
                 </div>

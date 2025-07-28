@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="min-h-screen py-24">
       {/* Hero Section */}
-      <section className='flex justify-center items-center py-6' style={{ background: `linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5), transparent)` }}>
+      <section className='flex justify-center items-center py-6' id='home' style={{ background: `linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5), transparent)` }}>
         <div className="z-10 text-center max-w-3xl mx-auto px-4 text-white">
           <h1 className="font-bold text-[3rem] sm:text-[3.5rem]  md:text-[5rem]  mb-3" style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.9)" }}>أسرة محمد علي</h1>
 
@@ -22,13 +22,13 @@ const Home = () => {
           
           <div className="flex gap-2 justify-center mt-12">
             <button 
-              className="bg-[--primary-color] py-2 px-4 rounded-lg hover:bg-blue-800 hover:translate-y-[-4px] transition-colors duration-100"
+              className="bg-[--primary-color] py-2 px-4 rounded-lg hover:bg-[--secondary-color] hover:translate-y-[-4px] transition-colors duration-100"
               onClick={() => document.getElementById('history')?.scrollIntoView({ behavior: 'smooth' })}
             >
               النظرة التاريخية
             </button>
             <button 
-              className="bg-[--secondary-color] py-2 px-4 rounded-lg hover:bg-blue-700 hover:translate-y-[-4px] transition-colors duration-100"
+              className="border-2 border-[--primary-color] py-2 px-4 rounded-lg hover:bg-[--secondary-color] hover:translate-y-[-4px] transition-colors duration-100"
               onClick={() => document.getElementById('personalities')?.scrollIntoView({ behavior: 'smooth' })}
             >
               أبرز الشخصيات

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Data from '../Data/data';
+import React from 'react';
 
 interface PersonType {
   id: number;
@@ -73,4 +74,4 @@ const Personalities = () => {
   );
 };
 
-export default Personalities; 
+export default React.memo (Personalities) ;

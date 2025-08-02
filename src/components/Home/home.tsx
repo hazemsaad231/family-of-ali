@@ -1,14 +1,13 @@
 import Achievements from './Achievements/Achievements';
 import Personalities from './Personalities/Personalities';
 import History from "./History/history";
-import img from "../../assets/img/castle.png";
 
 
 const Home = () => {
   return (
     <div className="min-h-screen py-24">
       {/* Hero Section */}
-      <section className='flex justify-center items-center py-6' id='home' style={{ background: `linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5), transparent)` }}>
+      <section className='flex justify-center items-center h-screen py-6' id='home' style={{ background: `linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5), transparent)` }}>
         <div className="z-10 text-center max-w-3xl mx-auto px-4 text-white">
           <h1 className="font-bold text-[3rem] sm:text-[3.5rem]  md:text-[5rem]  mb-3" style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.9)" }}>أسرة محمد علي</h1>
 
@@ -17,7 +16,7 @@ const Home = () => {
             نهضة الدولة اقتصادياً واجتماعياً، حيث أعادت هيكلة التعليم، وأطلقت مشاريع
             صناعية ضخمة، واهتمت بتطوير الجيش ليكون قوة فاعلة على الساحة الدولية
           </p>
-          <img alt="أسرة محمد علي" className="hero-img w-80 sm:w-80 md:w-96 lg:w-96 xl:w-96 rounded-2xl shadow-2xl opacity-65 m-auto" src = {img}></img>
+          {/* <img alt="أسرة محمد علي" className="hero-img w-80 sm:w-80 md:w-96 lg:w-96 xl:w-96 rounded-2xl shadow-2xl opacity-65 m-auto" src = {img}></img> */}
           
           <div className="flex gap-2 justify-center mt-12">
             <button 

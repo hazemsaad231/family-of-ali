@@ -1,7 +1,6 @@
-import Achievements from '../Achievements/Achievements';
-import Personalities from '../Personalities/Personalities';
-import One from "./part1";
-import Two from "./part2";
+import Achievements from './Achievements/Achievements';
+import Personalities from './Personalities/Personalities';
+import History from "./History/history";
 import img from "../../assets/img/castle.png";
 
 
@@ -43,8 +42,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-primary-color text-center mb-16">نظرة تاريخية</h2>
           <div className="grid grid-cols-1 md:grid-cols-2">
-            <One />
-            <Two />
+            <History />
           </div>
         </div>
       </section>

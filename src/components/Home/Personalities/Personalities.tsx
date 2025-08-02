@@ -29,6 +29,7 @@ const Personalities = () => {
                     src={person.img}
                     alt={person.name}
                     className="w-full h-80 sm:h-80 md:h-full object-center transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
                   />
                 </div>
                 <div className="md:w-2/3 p-6 md:p-8 flex flex-col justify-center">

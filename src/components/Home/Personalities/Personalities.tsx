@@ -16,6 +16,7 @@ interface PersonType {
 const Personalities = () => {
   return (
     <section className="py-16 bg-cream/5 backdrop-blur-sm">
+      
       <div className="container mx-auto px-4">
         <h2 className="title text-center mb-12">شخصيات الأسرة</h2>
         <div className="grid gap-8">
@@ -23,13 +24,13 @@ const Personalities = () => {
             <div
               key={person.id}
             >
-              <div className="h-full sm:h-full md:h-[28rem] flex flex-col md:flex-row bg-cream rounded-xl overflow-hidden shadow-lg transition-transform duration-500 hover:scale-[1.04]">
+              <div className="h-full sm:h-full md:h-[28rem] flex flex-col md:flex-row bg-cream rounded-xl hover:rotate-2 transition-transform duration-500">
                 <div className="md:w-1/3 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-brown-900/20 to-transparent z-10" />
                   <img
                     src={person.img}
                     alt={person.name}
-                    className="w-full h-80 sm:h-80 md:h-full object-center transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-80 sm:h-80 md:h-full rounded-r-xl object-center transition-transform duration-700 group-hover:scale-110"
                     loading="lazy"
                   />
                 </div>

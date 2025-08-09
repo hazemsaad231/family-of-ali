@@ -1,5 +1,5 @@
 import Achievements from './Achievements/Achievements';
-// import Personalities from './Personalities/Personalities';
+import Personalities from './Personalities/Personalities';
 import History from "./History/history";
 
 
@@ -48,9 +48,9 @@ const Home = () => {
       </section>
 
       {/* Personalities Section */}
-      {/* <section id="personalities" className="py-20">
+      <section id="personalities" className="py-20">
         <Personalities />
-      </section> */}
+      </section>
 
       {/* Achievements Section */}
       <section id="achievements" className="py-20 bg-cream/30">

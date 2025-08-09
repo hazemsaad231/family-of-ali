@@ -21,13 +21,13 @@ const Home = () => {
           
           <div className="flex gap-2 justify-center mt-12">
             <button 
-              className="bg-[--primary-color] py-2 px-4 rounded-lg hover:bg-blue-900 hover:translate-y-[-4px] transition-colors duration-100"
+              className="bg-[--primary-color] py-2 px-4 rounded-lg hover:bg-transparent hover:text-[--primary-color] border-2 hover:border-[--primary-color] hover:translate-y-[-4px] transition-colors duration-100"
               onClick={() => document.getElementById('history')?.scrollIntoView({ behavior: 'smooth' })}
             >
               النظرة التاريخية
             </button>
             <button 
-              className="border-2 border-[--primary-color] py-2 px-4 rounded-lg hover:bg-blue-900 hover:translate-y-[-4px] transition-colors duration-100"
+              className="border-2 border-[--primary-color] text-[--primary-color] py-2 px-4 rounded-lg hover:bg-[--primary-color] hover:text-cream hover:translate-y-[-4px] transition-colors duration-100"
               onClick={() => document.getElementById('personalities')?.scrollIntoView({ behavior: 'smooth' })}
             >
               أبرز الشخصيات
@@ -49,9 +49,7 @@ const Home = () => {
 
       {/* Achievements Section */}
       <section id="achievements">
-        <div className="container mx-auto px-4">
           <Achievements />
-        </div>
       </section>
     </div>
   );

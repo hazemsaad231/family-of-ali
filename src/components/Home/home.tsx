@@ -5,10 +5,10 @@ import History from "./History/history";
 
 const Home = () => {
   return (
-    <div className="min-h-screen py-24">
+    <div>
 
       {/* Hero Section */}
-      <section className='flex justify-center items-center h-screen py-6' id='home'>
+      <section className='flex justify-center items-center h-screen' id='home'>
      
         <div className="z-10 text-center max-w-3xl mx-auto px-4 text-white">
           <h1 className="font-bold text-[3rem] sm:text-[3.5rem]  md:text-[5rem]  mb-3" style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.9)" }}>أسرة محمد علي</h1>
@@ -38,22 +38,17 @@ const Home = () => {
       </section>
 
       {/* Historical Overview Section */}
-      <section id="history" className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-primary-color text-center mb-16">نظرة تاريخية</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2">
+      <section id="history"> 
             <History />
-          </div>
-        </div>
       </section>
 
       {/* Personalities Section */}
-      <section id="personalities" className="py-20">
+      <section id="personalities">
         <Personalities />
       </section>
 
       {/* Achievements Section */}
-      <section id="achievements" className="py-20 bg-cream/30">
+      <section id="achievements">
         <div className="container mx-auto px-4">
           <Achievements />
         </div>

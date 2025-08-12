@@ -136,7 +136,6 @@ const Navbar = () => {
                     <div className={`lg:hidden transition-all duration-300 z-50 bg-cream/95 backdrop-blur-md shadow-lg`}
                 >
                     <div className="flex flex-col gap-4 py-4">
-                        <Link to="/">
                         <button 
                             className={`nav-btn text-center ${activeSection === 'home' ? 'active' : ''}`}
                             onClick={() => handleNavClick('home')}
@@ -144,8 +143,8 @@ const Navbar = () => {
                              <HashLink smooth to="/#home">
                            الرئيسية 
                             </HashLink>
+                            
                         </button>
-                        </Link>
                         <button 
                             className={`nav-btn text-center ${activeSection === 'history' ? 'active' : ''}`}
                             onClick={() => handleNavClick('history')}

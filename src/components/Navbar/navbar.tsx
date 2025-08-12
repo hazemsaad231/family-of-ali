@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import logo from "../../assets/img/logo.png";
-import { Link } from 'react-router-dom';
 import { HashLink} from 'react-router-hash-link';
 
 

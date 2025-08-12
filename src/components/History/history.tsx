@@ -1,12 +1,27 @@
+import { motion } from "framer-motion";
 import { Data2 } from "../Data/data";
+
+
 const History = () => {
+
+
+
     return (
+        <>
         <div className="text-basic">
         <h2 className="text-4xl font-bold text-center mb-16">نظرة تاريخية</h2>
         <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
         {Data2.map((item, index) => (
-        <div key={index} className="bg-white rounded-2xl shadow-xl p-8 transform transition-all duration-300 hover:scale-[1.02]">
+        <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileHover={{ scale: 1.05, rotate: 3 }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
+      className="w-full bg-white rounded-2xl shadow-md p-6 border border-gray-200"
+      key={index}
+    >
+    
                         <h3 className="text-2xl font-bold text-primary-color mb-6">{item.title}</h3>
             <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -45,11 +60,14 @@ const History = () => {
                     </div>
                 </div>
             </div>
-        </div>
+    </motion.div>
 ))}
 </div>
-        </div>
+</div>
+
+        </>
     );
 };
 
 export default History; 
+

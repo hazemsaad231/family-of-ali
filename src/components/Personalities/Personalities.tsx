@@ -19,12 +19,12 @@ const Personalities = () => {
       
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">شخصيات الأسرة</h2>
-        <div className="grid gap-8">
+        <div className="grid gap-4">
           {Data.map((person: PersonType) => (
             <div
               key={person.id}
             >
-              <div className="h-full sm:h-full md:h-[28rem] flex flex-col md:flex-row bg-cream rounded-xl hover:rotate-2 transition-transform duration-500">
+              <div className="h-full sm:h-full md:h-[28rem] flex flex-col md:flex-row bg-cream rounded-xl hover:scale-95 transition-transform duration-500">
                 <div className="md:w-1/3 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-brown-900/20 to-transparent z-10" />
                   <img

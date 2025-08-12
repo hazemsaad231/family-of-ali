@@ -15,10 +15,10 @@ interface PersonType {
 
 const Personalities = () => {
   return (
-    <section className="py-16 bg-cream/5 backdrop-blur-sm">
+    <section className="py-16 bg-cream/5 backdrop-blur-sm text-basic">
       
       <div className="container mx-auto px-4">
-        <h2 className="title text-center mb-12">شخصيات الأسرة</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">شخصيات الأسرة</h2>
         <div className="grid gap-8">
           {Data.map((person: PersonType) => (
             <div
@@ -36,7 +36,7 @@ const Personalities = () => {
                 </div>
                 <div className="md:w-2/3 p-6 md:p-8 flex flex-col justify-center">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-2xl font-bold text-brown-900">{person.name}</h3>
+                    <h3 className="text-2xl font-bold">{person.name}</h3>
                     <span className="text-brown-700 text-sm font-medium">{person.date}</span>
                   </div>
                   <div className="mb-2">
@@ -60,7 +60,7 @@ const Personalities = () => {
                   <div className="mt-6">
                     <Link 
                       to={`/personality/${person.id}`}
-                      className="text-white bg-blue-900 rounded-lg hover:bg-blue-800 font-bold p-4"
+                      className="text-white bg-basic rounded-lg hover:bg-blue-800 font-bold p-4"
                     >
                       اقرأ المزيد
                     </Link>

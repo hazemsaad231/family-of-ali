@@ -1,8 +1,8 @@
 import { Data2 } from "../Data/data";
 const History = () => {
     return (
-        <div >
-        <h2 className="text-4xl font-bold text-primary-color text-center mb-16">نظرة تاريخية</h2>
+        <div className="text-basic">
+        <h2 className="text-4xl font-bold text-center mb-16">نظرة تاريخية</h2>
         <div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
         {Data2.map((item, index) => (
@@ -15,7 +15,7 @@ const History = () => {
                     </div>
                     <div>
                         <h4 className="text-xl font-semibold text-primary-color mb-2">{item.subjects[0]}</h4>
-                        <p className="text-gray-700 leading-relaxed">
+                        <p className="leading-relaxed">
                           {item.details[0]}
                         </p>
                     </div>
@@ -27,7 +27,7 @@ const History = () => {
                     </div>
                     <div>
                         <h4 className="text-xl font-semibold text-primary-color mb-2">{item.subjects[1]}</h4>
-                        <p className="text-gray-700 leading-relaxed">
+                        <p className="leading-relaxed">
                             {item.details[1]}
                         </p>
                     </div>
@@ -39,7 +39,7 @@ const History = () => {
                     </div>
                     <div>
                         <h4 className="text-xl font-semibold text-primary-color mb-2">{item.subjects[2]}</h4>
-                        <p className="text-gray-700 leading-relaxed">
+                        <p className="leading-relaxed">
                             {item.details[2]}
                         </p>
                     </div>

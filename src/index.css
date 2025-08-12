@@ -2,19 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --primary-color: #1a237e;
-  --secondary-color: #3949ab; 
-  --text-color: #1a237e; 
+  --secondary-color: #3949ab;
+  --basic : #131550;
+  --text-color: #1a237e;
   --light-blue: #e8eaf6;
-  --cream: #f5f7ff; 
+  --cream: #f5f7ff;
   --dark-blue: #0d47a1;
-  --transition-speed: 0.3s;
-  --border-radius: 1rem;
-  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --box-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  font-family: "Cairo", sans-serif;
 }
 
 html {
@@ -30,27 +25,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-main {
-  flex: 1;
-}
-
-/* Typography */
-.title {
-  font: 700 2.5rem 'Markazi Text';
-  color: var(--primary-color);
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.5rem;
-  position: relative;
-  padding-bottom: 0.5rem;
-}
-
-/* Footer Styles */
-.footer-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+  font-family: 'Cairo', sans-serif;
 }
 
 /* Navbar Styles */
@@ -65,14 +40,15 @@ main {
     width: 100%;
 } 
 
-@media (min-width: 768px) {
-    .nav-btn {
-        width: auto;
-    }
+
+.footer-title{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .nav-btn:hover {
-    background-color: var(--primary-color);
+    background-color: var(--basic);
     color: white;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     transform: scale(1.05);
@@ -84,7 +60,7 @@ main {
 }
 
 .nav-btn.active {
-    background-color: var(--primary-color);
+    background-color: var(--basic);
     color: white;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-} 
+}  

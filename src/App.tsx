@@ -2,7 +2,7 @@ import './App.css'
 import Home from './components/Home/home'
 import Master from './components/Outlet/master'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import PersonalityDetails from './components/Home/Personalities/PersonalityDetails'
+import PersonalityDetails from './components/Personalities/PersonalityDetails'
 
 function App() {
 

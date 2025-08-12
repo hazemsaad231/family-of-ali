@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import logo from "../../assets/img/logo.png";
 import { Link } from 'react-router-dom';
+import { HashLink} from 'react-router-hash-link';
 
 
 const Navbar = () => {
@@ -52,26 +53,23 @@ const Navbar = () => {
                 <div className="flex items-center justify-between">
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center gap-6">
+                    <div className="hidden lg:flex items-center gap-2 w-1/2">
                                               
                         <button 
                             className={`nav-btn ${activeSection === 'home' ? 'active' : ''}`}
                             onClick={() => handleNavClick('home')}
-                        >  <Link to="/" >
-                            <a href="#home">
+                        >  
+                                <HashLink smooth to="/#home" >
                            الرئيسية 
-                            </a>
-                        </Link>
+                                </HashLink>
+                            
                         </button>
                        
                         <button 
                             className={`nav-btn ${activeSection === 'history' ? 'active' : ''}`}
                             onClick={() => handleNavClick('history')}
                         >
-                            <a href="#history">
-                            النظرة التاريخية
-
-                            </a>
+                            <a href="#history">النظرة التاريخية</a>
                         </button>
 
 
@@ -79,9 +77,7 @@ const Navbar = () => {
                             className={`nav-btn ${activeSection === 'personalities' ? 'active' : ''}`}
                             onClick={() => handleNavClick('personalities')}
                         >
-                            <a href="#personalities">
-الشخصيات
-                            </a>
+                            <a href="#personalities">الشخصيات</a>
                             
                         </button>
                         <button 
@@ -106,7 +102,7 @@ const Navbar = () => {
 
                     {/* Mobile Menu Button */}
                     <button 
-                        className="md:hidden text-primary-color p-2"
+                        className="lg:hidden text-primary-color p-2"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     >
                         <svg 
@@ -137,7 +133,7 @@ const Navbar = () => {
 
                 {/* Mobile Navigation */}
                 {isMobileMenuOpen && (
-                    <div className={`md:hidden transition-all duration-300 z-50 bg-cream/95 backdrop-blur-md shadow-lg`}
+                    <div className={`lg:hidden transition-all duration-300 z-50 bg-cream/95 backdrop-blur-md shadow-lg`}
                 >
                     <div className="flex flex-col gap-4 py-4">
                         <Link to="/">
@@ -145,9 +141,9 @@ const Navbar = () => {
                             className={`nav-btn text-center ${activeSection === 'home' ? 'active' : ''}`}
                             onClick={() => handleNavClick('home')}
                         >
-                             <a href="#home">
+                             <HashLink smooth to="/#home">
                            الرئيسية 
-                            </a>
+                            </HashLink>
                         </button>
                         </Link>
                         <button 

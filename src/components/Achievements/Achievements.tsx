@@ -7,9 +7,9 @@ const Achievements = () => {
  
 
   return (
-    <section className="py-16">
+    <section className="py-16 text-basic">
       <div className="container mx-auto px-4">
-        <h2 className="title mb-12">أبرز الإنجازات</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">أبرز الإنجازات</h2>
         
         <div className="timeline-container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -21,8 +21,8 @@ const Achievements = () => {
                 <div className="flex items-center mb-4">
                   <span className="text-4xl mr-4 hover:scale-110 duration-500">{achievement.icon}</span>
                   <div>
-                    <h3 className="text-xl font-bold text-primary-color">{achievement.title}</h3>
-                    <span className="text-secondary-color font-semibold">{achievement.year}</span>
+                    <h3 className="text-xl font-bold">{achievement.title}</h3>
+                    <span className="font-semibold">{achievement.year}</span>
                   </div>
                 </div>
                 <p className="text-content mb-4">{achievement.description}</p>

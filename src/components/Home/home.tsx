@@ -1,6 +1,6 @@
 // import Achievements from '../Achievements/Achievements';
 // import Personalities from '../Personalities/Personalities';
-// import History from "../History/history";
+import History from "../History/history";
 
 
 const Home = () => {
@@ -37,10 +37,10 @@ const Home = () => {
 
       </section>
 
-      {/* Historical Overview Section
+      {/* Historical Overview Section */}
       <section id="history"> 
             <History />
-      </section> */}
+      </section> 
 
       {/* Personalities Section */}
       {/* <section id="personalities">

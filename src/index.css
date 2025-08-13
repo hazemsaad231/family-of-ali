@@ -19,7 +19,7 @@ html {
 
 /* Base Styles */
 body {
-  background:url("../src/assets/img/innerBackground.jpg") no-repeat center fixed;
+  background:url("../src/assets/img/innerBackground.jpg")fixed center center;
   background-size: cover;
   color: var(--text-color);
   min-height: 100vh;

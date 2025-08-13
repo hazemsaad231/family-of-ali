@@ -16,10 +16,8 @@ html,
 body {
   scroll-behavior: smooth;
   direction: rtl;
-  overscroll-behavior: none;
-  background:url("../src/assets/img/innerBackground.jpg")fixed center center;
   color: var(--text-color);
-    font-family: 'Cairo', sans-serif;
+  font-family: 'Cairo', sans-serif;
 }
 
 /* Navbar Styles */

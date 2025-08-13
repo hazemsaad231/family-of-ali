@@ -21,16 +21,15 @@ const PersonalityDetails = () => {
   }
 
   return (
-    <div className="min-h-screen bg-cream/5 backdrop-blur-sm py-16">
-      <div className="mx-auto px-4">
-        <div className="bg-cream rounded-2xl shadow-2xl overflow-hidden">
+    <div className="min-h-screen py-16">
+        <div className="bg-cream rounded-2xl shadow-2xl overflow-hidden m-auto w-[90%] ">
           {/* Header */}
-          <div className="relative h-[400px] md:h-[600px] mb-8">
+          <div className="relative h-[400px] md:h-[600px] mb-8 ">
             <div className="absolute inset-0 bg-black/40" />
             <img
               src={person.img}
               alt={person.name}
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-center"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
@@ -53,7 +52,7 @@ const PersonalityDetails = () => {
 
           <div className="p-8 md:p-12">
             {/* Description */}
-            <div className="max-w-4xl mx-auto mb-12">
+            <div className="max-w-4xl mb-12">
               <div className="prose prose-lg max-w-none">
                 <p className="text-navy-900 px-4 leading-relaxed text-xl md:text-2xl font-medium">
                   {person.details || person.text}
@@ -63,7 +62,7 @@ const PersonalityDetails = () => {
 
             {/* Accomplishments */}
             {person.accomplishments && (
-              <div className="max-w-4xl mx-auto">
+              <div className="max-w-4xl">
                 <h2 className="text-4xl font-bold text-navy-900 mb-12 px-4">أبرز الإنجازات</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   {person.accomplishments.map((accomplishment, index) => (
@@ -80,7 +79,7 @@ const PersonalityDetails = () => {
             )}
 
             {/* Back Button */}
-            <div className="mt-12 text-center">
+            <div className="mt-12">
               <Link
                 to="/"
                 className="bg-blue-900 text-cream px-6 py-3 rounded-lg font-bold text-xl hover:bg-blue-800 transition-colors duration-300"
@@ -91,7 +90,6 @@ const PersonalityDetails = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

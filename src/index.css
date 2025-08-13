@@ -15,12 +15,10 @@
 html {
   scroll-behavior: smooth;
   direction: rtl;
-  overflow: hidden;
 }
 
  .App{
   background:url("../src/assets/img/innerBackground.jpg")fixed center center;
-  background-size: cover;
   color: var(--text-color);
   min-height: 100vh;
   display: flex;

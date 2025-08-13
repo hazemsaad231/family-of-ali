@@ -16,7 +16,7 @@ const History = () => {
         <motion.div
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
-    whileInView={{ opacity: 1, y: 0, scale: 1.05, rotate: 2 }}
+    whileInView={{ opacity: 1, y: 0, scale: 1.05, rotate: 1.3 }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
       className="w-full bg-white rounded-2xl p-4 border border-gray-200"
       key={index}

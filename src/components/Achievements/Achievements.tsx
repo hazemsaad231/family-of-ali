@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { achievements } from '../Data/data';
 
 const Achievements = () => {
@@ -14,7 +15,11 @@ const Achievements = () => {
         <div className="timeline-container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {achievements.map((achievement, index) => (
-              <div 
+              <motion.div
+              whileInView={{ opacity: 1   , rotate: 2 }}
+              initial={{ opacity: 0 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+
                 key={index} 
                 className="bg-white shadow-lg rounded-lg p-6 transition-transform duration-500 hover:scale-105 border-t-4 border-blue-800"
               >
@@ -34,7 +39,7 @@ const Achievements = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

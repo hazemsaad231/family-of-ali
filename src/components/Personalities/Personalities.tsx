@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Data from '../Data/data';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 interface PersonType {
   id: number;
@@ -21,10 +22,13 @@ const Personalities = () => {
         <h2 className="text-4xl font-bold text-center mb-12">شخصيات الأسرة</h2>
         <div className="grid gap-4">
           {Data.map((person: PersonType) => (
-            <div
+            <motion.div
+            whileInView={{ opacity: 1 }}
+initial={{ opacity: 0 }}
+transition={{ duration: 0.8, ease: "easeInOut" }}
               key={person.id}
             >
-              <div className="h-full sm:h-full md:h-[28rem] flex flex-col md:flex-row bg-cream rounded-xl hover:scale-95 transition-transform duration-500">
+              <div className="h-full sm:h-full md:h-[28rem] flex flex-col md:flex-row bg-cream rounded-xl">
                 <div className="md:w-1/3 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-brown-900/20 to-transparent z-10" />
                   <img
@@ -67,7 +71,7 @@ const Personalities = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

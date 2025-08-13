@@ -21,6 +21,19 @@ body {
   background: url('../src/assets/img/bg.jpg');
 
 }
+/* فقط على الشاشات الكبيرة (الكمبيوتر) */
+@media (min-width: 768px) {
+  body {
+    background-attachment: fixed;
+  }
+}
+
+/* على الموبايل background-attachment عادي (scroll) */
+@media (max-width: 767px) {
+  body {
+    background-attachment: scroll;
+  }
+}
 
 /* Navbar Styles */
  .nav-btn {

@@ -11,7 +11,7 @@ const History = () => {
         <div className="text-basic">
         <h2 className="text-4xl font-bold text-center mb-16">نظرة تاريخية</h2>
         <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 w-[80%] place-self-center">
         {Data2.map((item, index) => (
         <motion.div
       initial={{ opacity: 0, y: 100 }}

@@ -1,6 +1,6 @@
 import Achievements from '../Achievements/Achievements';
-// import Personalities from '../Personalities/Personalities';
-// import History from "../History/history";
+import Personalities from '../Personalities/Personalities';
+import History from "../History/history";
 
 
 const Home = () => {
@@ -38,14 +38,14 @@ const Home = () => {
       </section>
 
       {/* Historical Overview Section */}
-      {/* <section id="history"> 
+      <section id="history"> 
             <History />
-      </section>  */}
+      </section> 
 
       {/* Personalities Section */}
-      {/* <section id="personalities">
+      <section id="personalities">
         <Personalities />
-      </section> */}
+      </section>
 
       {/* Achievements Section */}
       <section id="achievements">

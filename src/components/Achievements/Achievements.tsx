@@ -13,7 +13,7 @@ const Achievements = () => {
         <h2 className="text-4xl font-bold text-center mb-12">أبرز الإنجازات</h2>
         
         <div className="timeline-container">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 w-[90%] place-self-center">
             {achievements.map((achievement, index) => (
               <motion.div
               whileInView={{ opacity: 1   , rotate: 1.5 }}

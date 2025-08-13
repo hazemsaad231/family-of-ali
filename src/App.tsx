@@ -21,10 +21,9 @@ function App() {
 
 
   return (
-    <>
-   <RouterProvider router={route} ></RouterProvider>
-
-    </>
+    <div className='App'>
+   <RouterProvider router={route} />
+    </div>
   )
 }
 

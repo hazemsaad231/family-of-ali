@@ -18,7 +18,7 @@ const History = () => {
       animate={{ opacity: 1, y: 0 }}
     whileInView={{ opacity: 1, y: 0, scale: 1.05, rotate: 2 }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
-      className="w-full bg-white rounded-2xl shadow-md p-6 border border-gray-200"
+      className="w-full bg-white rounded-2xl p-4 border border-gray-200"
       key={index}
     >
     

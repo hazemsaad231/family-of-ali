@@ -16,7 +16,7 @@ const Achievements = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {achievements.map((achievement, index) => (
               <motion.div
-              whileInView={{ opacity: 1   , rotate: 2 }}
+              whileInView={{ opacity: 1   , rotate: 1.5 }}
               initial={{ opacity: 0 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
 

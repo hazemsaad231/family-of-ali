@@ -1,10 +1,11 @@
 import { useParams, Link } from 'react-router-dom';
 import Data from '../Data/data';
+import React , { useMemo } from 'react';
 
 
 const PersonalityDetails = () => {
   const { id } = useParams();
-  const person = Data.find((p) => p.id === Number(id));
+  const person = useMemo(() => { return Data.find((p) => p.id === Number(id))}, [id])
 
   if (!person) {
     return (
@@ -21,7 +22,7 @@ const PersonalityDetails = () => {
 
   return (
     <div className="min-h-screen bg-cream/5 backdrop-blur-sm py-16">
-      <div className="container mx-auto px-4">
+      <div className="mx-auto px-4">
         <div className="bg-cream rounded-2xl shadow-2xl overflow-hidden">
           {/* Header */}
           <div className="relative h-[400px] md:h-[600px] mb-8">
@@ -30,6 +31,7 @@ const PersonalityDetails = () => {
               src={person.img}
               alt={person.name}
               className="w-full h-full object-cover object-top"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
             <div className="absolute bottom-0 w-full p-8 md:p-12">
@@ -93,4 +95,4 @@ const PersonalityDetails = () => {
   );
 };
 
-export default PersonalityDetails; 
+export default React.memo (PersonalityDetails);

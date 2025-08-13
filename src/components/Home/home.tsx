@@ -1,6 +1,6 @@
-import Achievements from '../Achievements/Achievements';
-import Personalities from '../Personalities/Personalities';
-import History from "../History/history";
+// import Achievements from '../Achievements/Achievements';
+// import Personalities from '../Personalities/Personalities';
+// import History from "../History/history";
 
 
 const Home = () => {

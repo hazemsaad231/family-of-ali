@@ -21,15 +21,15 @@ const PersonalityDetails = () => {
   }
 
   return (
-    <div className="min-h-screen py-16">
-        <div className="bg-cream rounded-2xl shadow-2xl overflow-hidden m-auto w-[90%] ">
+    <div className="min-h-screen py-24 bg-cream/5 ">
+        <div className="bg-cream rounded-2xl shadow-2xl overflow-hidden m-auto w-[90%] lg:w-[70%] ">
           {/* Header */}
-          <div className="relative h-[400px] md:h-[600px] mb-8 ">
+          <div className="relative h-[400px] mb-8 ">
             <div className="absolute inset-0 bg-black/40" />
             <img
               src={person.img}
               alt={person.name}
-              className="w-full h-full object-center"
+              className="w-full h-full object-fill"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />

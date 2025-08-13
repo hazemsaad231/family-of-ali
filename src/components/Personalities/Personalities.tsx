@@ -16,7 +16,7 @@ interface PersonType {
 
 const Personalities = () => {
   return (
-    <section className="py-16 bg-cream/5 backdrop-blur-sm text-basic">
+    <section className="py-16 bg-cream/5 text-basic">
       
       <div className="mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">شخصيات الأسرة</h2>

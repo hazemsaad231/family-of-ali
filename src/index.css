@@ -18,6 +18,8 @@ body {
   direction: rtl;
   color: var(--text-color);
   font-family: 'Cairo', sans-serif;
+  background: url('../src/assets/img/bg.jpg');
+
 }
 
 /* Navbar Styles */
